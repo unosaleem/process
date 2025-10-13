@@ -1,0 +1,267 @@
+/* ===================================
+   Blog Section
+=================================== */
+.blog-section{
+  padding: 50px 0px;
+  background-color: #f4f8fc;
+}
+.blog-section .blog-card {
+  display: flex;
+  flex-direction: column;
+  background: #fff;
+  border-radius: 5px;
+  overflow: hidden;
+  box-shadow: 0 1px 4px 0 rgba(34, 34, 34, .302);
+  transition: all 0.3s ease;
+  height: 100%;
+  margin-bottom: 10px;
+}
+
+.recent-articles{
+  padding: 50px 0px;
+  background-color: #f4f8fc;
+}
+
+.recent-articles .section-title {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: #333;
+}
+
+.blog-card {
+  display: flex;
+  flex-direction: column;
+  background: #fff;
+  border-radius: 5px;
+  overflow: hidden;
+  box-shadow: 0 1px 4px 0 rgba(34, 34, 34, .302);
+  transition: all 0.3s ease;
+  height: 100%;
+}
+
+.blog-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 1px 4px 0 rgba(34, 34, 34, .302);
+}
+
+.blog-image {
+  position: relative;
+  width: 100%;
+  height: 220px;
+  overflow: hidden;
+}
+
+.blog-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.blog-category {
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+  background: #0097a7;
+  color: #fff;
+  font-size: 0.8rem;
+  font-weight: 600;
+  padding: 6px 12px;
+  border-radius: 6px;
+  text-transform: uppercase;
+}
+
+.blog-content {
+  padding: 20px;
+  flex-grow: 1;
+}
+.blog-content a{
+  text-decoration: none;
+}
+
+.blog-title {
+  font-size: 18px;
+  font-weight: 700;
+  color: #003366;
+  margin-bottom: 10px;
+}
+
+/*.blog-excerpt {*/
+/*    color: #555;*/
+/*    margin-bottom: 15px;*/
+/*}*/
+
+.blog-meta {
+  font-size: 0.85rem;
+  color: #666;
+}
+
+.blog-meta .author {
+  display: block;
+  font-weight: 600;
+  color: #006699;
+  margin-bottom: 6px;
+}
+
+.blog-meta .meta-info {
+  font-size: 0.8rem;
+  color: #999;
+}
+/* Sidebar base styling */
+.specialities-sidebar {
+  border-radius: 8px;
+}
+.specialities-sidebar h3 {
+  color: #003366;
+  border-bottom: 2px solid #0097a7;
+  padding-bottom: 8px;
+  font-size: 1.25rem;
+}
+.specialities-sidebar .badge {
+  background: #e0f3f5;
+  color: #003366;
+  padding: 8px 12px;
+  font-size: 0.85rem;
+  text-align: left;
+  white-space: normal;    /* allow multi-line text */
+  line-height: 1.4;
+  flex: 1 1 auto;
+  max-width: 100%;
+}
+/* Mobile adjustments */
+@media (max-width: 767px) {
+  .specialities-sidebar {
+    max-height: none;   /* no fixed height on small screens */
+    overflow: visible;
+    display: none/* let it expand naturally */
+  }
+  .specialities-sidebar .badge {
+    width: 100%;        /* badges take full width */
+    font-size: 0.9rem;
+  }
+}
+
+/* ===================================
+   End Blog Section
+=================================== */
+
+/* Swiper */
+
+.swiper-slide {
+  display: flex;
+  justify-content: center;
+}
+
+/* ===================================
+   Events Section
+=================================== */
+.events-section {
+  padding: 50px 0;
+}
+.swiper-slide {
+  display: flex;
+  justify-content: center;
+}
+/* Awards Section */
+.awards-section {
+  padding: 50px 0;
+  background: #f0f8ff;
+}
+.year-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+.year-buttons button {
+  border: 1px solid #cce3ff;
+  background: #fff;
+  color: #004080;
+  padding: 8px 20px;
+  border-radius: 25px;
+  font-size: 14px;
+  transition: 0.3s;
+  cursor: pointer;
+}
+.year-buttons button:hover,
+.year-buttons button.active {
+  background: #004080;
+  color: #fff;
+}
+
+/* ===================================
+   End Events Section
+=================================== */
+
+/* ===================================
+   Testimonials Section
+=================================== */
+    .testimonial-slider {
+      padding: 50px 0px;
+      background: #f9f9f9;
+    }
+    
+   .video-card {
+      background: #fff;
+      border-radius: 5px;
+      box-shadow: 0 1px 4px 0 rgba(34, 34, 34, .302);
+      overflow: hidden;
+      transition: transform 0.3s ease;
+      max-width: 500px;
+      width: 100%;
+      margin-bottom: 10px;
+    }
+    
+    .video-card iframe {
+      width: 100%;
+      height: 280px;
+      border: none;
+    }
+    .video-card .content {
+      padding: 15px;
+      text-align: center;
+    }
+    .video-card .content h5 {
+      margin: 0;
+      font-weight: 600;
+      color: #333;
+    }
+
+   .patient-testimonial-slider {
+    padding: 50px 0px;
+    background: #f9f9f9;
+  }
+
+  .instagram-card {
+    background: #fff;
+    border-radius: 15px;
+    box-shadow: 0 1px 4px 0 rgba(34, 34, 34, .302);
+    overflow: hidden;
+    transition: transform 0.3s ease;
+    max-width: 500px;
+    width: 100%;
+    margin-bottom: 10px;
+  }
+
+.instagram-card iframe {
+  width: 100%;
+  height: 500px;
+  border: none;
+}
+iframe.instagram-media {
+  min-height: 550px !important;
+  width: 100% !important;
+  display: block !important;
+  background: #fff !important;
+  z-index: 10;
+}
+.swiper-slide iframe.instagram-media {
+  width: 100% !important;
+  min-height: 550px !important;
+  background: #fff !important;
+}
+.instagram-card .swiper-slide {
+  overflow: visible !important;
+}
+/* ===================================
+   End Testimonials Section
+=================================== */
+

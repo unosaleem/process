@@ -1,0 +1,90 @@
+:root {
+    --primary-teal: rgb(0,151,167);
+    --primary-navy: rgb(0,51,102);
+    --light-teal: rgba(0,151,167,0.1);
+    --light-navy: rgba(0,51,102,0.1);
+    --medium-teal: rgba(0,151,167,0.8);
+    --medium-navy: rgba(0,51,102,0.8);
+}
+
+.hero-section {
+    background: linear-gradient(135deg, var(--primary-navy) 0%, var(--primary-teal) 100%);
+    color: white;
+    padding: 40px 0;
+    position: relative;
+    overflow: hidden;
+}
+
+.hero-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="medical" patternUnits="userSpaceOnUse" width="20" height="20"><circle cx="10" cy="10" r="1" fill="white" opacity="0.1"/></pattern></defs><rect width="100" height="100" fill="url(%23medical)"/></svg>');
+    pointer-events: none;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+}
+
+.main-content {
+    background: white;
+    padding: 40px 0;
+}
+
+.content-image {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+    box-shadow: 0 1px 4px 0 rgba(34, 34, 34, .302);
+    margin-bottom: 40px;
+}
+
+.form-sidebar {
+    background: linear-gradient(135deg, var(--light-teal) 0%, var(--light-navy) 100%);
+    border-radius: 5px;
+    padding: 30px;
+    box-shadow: 0 1px 4px 0 rgba(34, 34, 34, .302);
+    position: sticky;
+    top: 150px;
+}
+
+.form-control:focus {
+    border-color: var(--primary-teal);
+    box-shadow: 0 0 0 0.2rem rgba(0,151,167,0.25);
+}
+
+.btn-primary-custom {
+    background: linear-gradient(135deg, var(--primary-teal) 0%, var(--primary-navy) 100%);
+    border: none;
+    border-radius: 8px;
+    padding: 12px 30px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    font-size: 14px;
+}
+
+.btn-primary-custom:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0,151,167,0.4);
+}
+
+.form-label {
+    font-size: 14px;
+    color: var(--primary-navy);
+    font-weight: 600;
+    margin-bottom: 8px;
+}
+
+@media (max-width: 768px) {
+    .hero-section {
+        padding: 50px 0;
+    }
+    .main-content {
+        padding: 20px 0;
+    }
+}

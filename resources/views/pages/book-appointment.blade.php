@@ -1,0 +1,232 @@
+@extends('layout.master')
+@section('css')
+<style>
+    .appointment-page-section{
+        padding: 50px 0px;
+    }
+    /* Form container */
+    .appointment-page-form {
+        background: #fff;
+        padding: 20px 30px;
+        border-radius: 5px;
+        box-shadow: 0 1px 4px 0 rgba(0, 0, 0, .25);
+    }
+
+    /* Section titles */
+    .section-title {
+        font-size: 18px;
+        font-weight: 600;
+        margin-bottom: 20px;
+        color: #0c9bb4;
+        border-left: 4px solid #0e9bb6;
+        padding-left: 12px;
+        background: #f1fdfb;
+        padding: 5px 10px;
+        border-radius: 6px;
+    }
+
+    /* Form elements */
+    .form-label {
+        font-weight: 500;
+        margin-bottom: 6px;
+    }
+    .form-control, .form-select {
+        border-radius: 5px;
+        padding: 5px 14px;
+        font-size: 0.95rem;
+    }
+
+    /* Buttons */
+    .btn-custom {
+        background: #009688;
+        color: #fff;
+    }
+    .btn-custom:hover {
+        background: #00796b;
+    }
+    .btn-back {
+        border: 1px solid #6c757d;
+        background: #fff;
+        border-radius: 8px;
+        padding: 10px 25px;
+        font-size: 1rem;
+        margin-left: 10px;
+        transition: 0.3s ease-in-out;
+    }
+    .btn-back:hover {
+        background: #f1f1f1;
+        transform: translateY(-2px);
+    }
+    .otp-btn {
+        white-space: nowrap;
+        font-size: 0.9rem;
+    }
+
+    /* Spacing */
+    .row.g-3 > [class*="col-"] {
+        margin-bottom: 15px;
+    }
+
+    /* Responsive adjustments */
+    @media (max-width: 768px) {
+        .header {
+            flex-direction: column;
+            text-align: center;
+        }
+        .header h2 {
+            font-size: 1.5rem;
+            margin-top: 10px;
+        }
+    }
+</style>
+@stop
+@section('content')
+    <section class="hero-section">
+        <div class="container container-custom">
+            <!-- Breadcrumb -->
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+                    <nav aria-label="breadcrumb">
+                        <ol class="breadcrumb justify-content-center">
+                            <li class="breadcrumb-item"><a href="#">Home</a></li>
+                            <li class="breadcrumb-item"><a href="#">Book Appointment</a></li>
+                        </ol>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="appointment-page-section">
+        <div class="container">
+            <div class="row">
+                <!-- Appointment Form -->
+                <div class="appointment-page-form">
+                    <form>
+                        <!-- Personal Information -->
+                        <div class="section-title">👤 Personnel Information</div>
+                        <div class="row g-3">
+                            <div class="col-12 col-md-6 col-lg-2">
+                                <label class="form-label">Patient Title *</label>
+                                <select class="form-select">
+                                    <option>Select Title</option>
+                                    <option>Mr.</option>
+                                    <option>Mrs.</option>
+                                    <option>Ms.</option>
+                                    <option>Dr.</option>
+                                </select>
+                            </div>
+                            <div class="col-12 col-md-6 col-lg-3">
+                                <label class="form-label">First Name *</label>
+                                <input type="text" class="form-control" placeholder="First Name">
+                            </div>
+                            <div class="col-12 col-md-6 col-lg-3">
+                                <label class="form-label">Middle Name</label>
+                                <input type="text" class="form-control" placeholder="Middle Name">
+                            </div>
+                            <div class="col-12 col-md-6 col-lg-4">
+                                <label class="form-label">Last Name *</label>
+                                <input type="text" class="form-control" placeholder="Last Name">
+                            </div>
+                            <div class="col-12 col-md-6 col-lg-3">
+                                <label class="form-label">Gender *</label>
+                                <select class="form-select">
+                                    <option>Select Gender</option>
+                                    <option>Male</option>
+                                    <option>Female</option>
+                                    <option>Other</option>
+                                </select>
+                            </div>
+                            <div class="col-12 col-md-6 col-lg-3">
+                                <label class="form-label">Date of Birth *</label>
+                                <input type="date" class="form-control">
+                            </div>
+                            <div class="col-12 col-md-6 col-lg-3">
+                                <label class="form-label">Email ID *</label>
+                                <input type="email" class="form-control" placeholder="Enter Email">
+                            </div>
+                            <div class="col-12 col-md-6 col-lg-3">
+                                <label class="form-label">Mobile No. *</label>
+                                <input type="tel" class="form-control" placeholder="Mobile">
+                            </div>
+                            <div class="col-12 col-md-6 col-lg-3">
+                                <label class="form-label">Country</label>
+                                <select class="form-select">
+                                    <option>INDIA</option>
+                                </select>
+                            </div>
+                            <div class="col-12 col-md-6 col-lg-3">
+                                <label class="form-label">State</label>
+                                <select class="form-select">
+                                    <option>MAHARASHTRA</option>
+                                </select>
+                            </div>
+                            <div class="col-12 col-md-6 col-lg-3">
+                                <label class="form-label">City</label>
+                                <select class="form-select">
+                                    <option>MUMBAI</option>
+                                </select>
+                            </div>
+                            <div class="col-12 col-md-6 col-lg-3">
+                                <label class="form-label">Pin Code</label>
+                                <input type="text" class="form-control" placeholder="Enter Pincode">
+                            </div>
+                        </div>
+
+                        <hr class="my-4">
+
+                        <!-- Doctor Section -->
+                        <div class="section-title">🩺 Doctor</div>
+                        <div class="row g-3">
+                            <div class="col-12 col-md-6">
+                                <label class="form-label">Select Doctor *</label>
+                                <select class="form-select">
+                                    <option>Select Doctors</option>
+                                </select>
+                            </div>
+                            <div class="col-12 col-md-6">
+                                <label class="form-label">Speciality *</label>
+                                <select class="form-select">
+                                    <option>All Speciality</option>
+                                    <option value="Gynae Laparoscopic Surgeries"> Gynae Laparoscopic Surgeries</option>
+                                    <option value="Obstetrics and Gynaecology">Obstetrics and Gynaecology</option>
+                                    <option value="Pediatricians">Pediatricians</option>
+                                    <option value="ENT">ENT</option>
+                                    <option value="General Surgery">General Surgery</option>
+                                    <option value="Orthopedics">Orthopedics</option>
+                                    <option value="Reconstructive URO Surgery">Reconstructive URO Surgery</option>
+                                    <option value="Critical Cases & ICU">Critical Cases & ICU</option>
+                                    <option value="Bariatric Surgery">Bariatric Surgery</option>
+                                    <option value="Internal Medicine">Internal Medicine</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <hr class="my-4">
+
+                        <!-- Appointment Section -->
+                        <div class="section-title">📅 Appointment Date & Time</div>
+                        <div class="row g-3">
+                            <div class="col-12 col-md-6">
+                                <label class="form-label">Date of Appointment *</label>
+                                <input type="date" class="form-control">
+                            </div>
+                            <div class="col-12 col-md-6">
+                                <label class="form-label">Time Slot *</label>
+                                <select class="form-select">
+                                    <option>No Available Slots</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <!-- Buttons -->
+                        <div class="mt-4 d-flex flex-column flex-sm-row justify-content-sm-start gap-2">
+                            <button type="submit" class="btn btn-custom btn-sm text-white w-10 w-sm-auto">Submit</button>
+                            <button type="button" class="btn btn-dark btn-sm w-10 w-sm-auto">Back</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Appointment Form -->
+@endsection
