@@ -36,4 +36,9 @@ class Doctor extends Model
 
     public $timestamps = true;
     protected $table = "doctors";
+
+    public function speciality()
+    {
+        return $this->belongsTo(Speciality::class);
+    }
 }

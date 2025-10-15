@@ -82,6 +82,9 @@
 
                     <p> Whether you need an ECG test in Delhi, a cardiology consultation in Delhi, or complex cardiac surgery in Delhi, Sunrise Hospital ensures exceptional care at every step.</p>
 
+                        <img src="{{asset('assets/images/facility/facility6.jpg')}}"
+                         alt="Obstetrics and Gynecology - Medical Care"
+                         class="content-image">
                     <h2> Meet Our Best Cardiologists in Delhi</h2>
                     <p> Our heart specialists in India are among the most experienced in the field, bringing years of expertise to diagnose and treat complex heart conditions. From heart bypass surgery in India to angioplasty cost in Delhi discussions, our cardiologists provide transparent, compassionate care. They work closely with you to develop plans that improve heart health and quality of life, making Sunrise Hospital a trusted cardiac hospital in Delhi NCR.</p>
 

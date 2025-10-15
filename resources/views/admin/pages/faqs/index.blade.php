@@ -35,11 +35,13 @@
               <td>
                 <a href="{{ route('faqs.show', $faq->id) }}" class="btn btn-secondary btn-sm"><i class="fas fa-eye"></i></a>
                 <a href="{{ route('faqs.edit', $faq->id) }}" class="btn btn-info btn-sm"><i class="fas fa-edit"></i></a>
-                <form action="{{ route('faqs.destroy', $faq->id) }}" method="POST" style="display:inline;">
-                  @csrf
-                  @method('DELETE')
-                  <button type="submit" class="btn btn-danger btn-sm"><i class="fas fa-trash-alt"></i></button>
-                </form>
+              <form action="{{ route('faqs.destroy', $faq->id) }}" method="POST" style="display:inline;" class="delete-form">
+                @csrf
+                @method('DELETE')
+                <button type="button" class="btn btn-danger btn-sm delete-btn" data-title="{{ $faq->question }}">
+                    <i class="fas fa-trash-alt"></i>
+                </button>
+              </form>
               </td>
             </tr>
             @empty
@@ -53,4 +55,33 @@
     </div>
   </div>
 </div>
+@endsection
+@section('scripts')
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    const deleteButtons = document.querySelectorAll('.delete-btn');
+
+    deleteButtons.forEach(button => {
+        button.addEventListener('click', function() {
+            const form = this.closest('.delete-form');
+            const title = this.getAttribute('data-title');
+
+            Swal.fire({
+                title: 'Are you sure?',
+                text: `You are about to delete "${title}"! This action cannot be undone.`,
+                icon: 'warning',
+                showCancelButton: true,
+                confirmButtonColor: '#d33',
+                cancelButtonColor: '#3085d6',
+                confirmButtonText: 'Yes, delete it!',
+                cancelButtonText: 'Cancel'
+            }).then((result) => {
+                if (result.isConfirmed) {
+                    form.submit();
+                }
+            });
+        });
+    });
+});
+</script>
 @endsection

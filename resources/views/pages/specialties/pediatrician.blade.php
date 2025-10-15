@@ -90,6 +90,11 @@
 
                     <!-- <h3 class="content-heading">Comprehensive Gynecological Services</h3> -->
                     <p>At Sunrise Hospital, our best pediatricians in Delhi recognize the importance of supporting families in navigating the complexities of child-rearing. By offering detailed advice and consultations, we equip parents with the information they need to create a healthy, safe environment for their children.</p>
+                   
+                        <img src="{{asset('assets/images/facility/facility6.jpg')}}"
+                         alt="Obstetrics and Gynecology - Medical Care"
+                         class="content-image">
+                   
                     <ul>
                         <li><strong>Routine Check-ups : </strong> Our pediatricians offer regular health screenings to ensure early detection of any health issues.</li>
                         <li><strong>Acute and Chronic Illness Treatment : </strong> We manage a wide range of illnesses, from the common cold to chronic conditions like asthma and diabetes.</li>

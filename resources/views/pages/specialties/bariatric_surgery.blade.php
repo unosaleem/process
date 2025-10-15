@@ -54,6 +54,10 @@
                     <p> Our bariatric surgeons are highly experienced and well-trained in performing these surgeries with precision and care. They prioritize patient safety and provide personalized treatment plans to ensure the best outcomes. By choosing the best surgeon for bariatric surgery in Delhi, you are ensuring that you receive expert care at every step of your weight loss journey.</p>
 
                     <h2> Pre-Operative and Post-Operative Care</h2>
+                    
+                        <img src="{{asset('assets/images/facility/facility6.jpg')}}"
+                         alt="Obstetrics and Gynecology - Medical Care"
+                         class="content-image">
                     <p> In addition to surgery, we provide comprehensive pre-operative and post-operative care. Our surgical team ensures that patients are physically and mentally prepared for surgery. After the procedure, we offer continuous monitoring and guidance to help patients adjust to their new lifestyle and dietary changes. </p>
 
                     <h2> Conclusion</h2>

@@ -30,7 +30,8 @@
                 <!-- Left Column - Content -->
                 <div class="col-lg-8">
                     <!-- Main Image -->
-                    <img src="{{asset('assets/images/specialty/laparoscopic_surg.jpg')}}"
+                    
+                        <img src="{{asset('assets/images/facility/facility6.jpg')}}"
                          alt="Obstetrics and Gynecology - Medical Care"
                          class="content-image">
 
@@ -86,6 +87,10 @@
                     <p>Our surgical team, including the Best Laparoscopic Surgeon in Delhi, is highly skilled in performing laparoscopic procedures for various abdominal and other medical conditions, ensuring excellent outcomes for our patients.</p>
 
                     <p>At Sunrise Hospital, we offer laparoscopic surgery in Delhi with cutting-edge technology and expert care. With a team led by the Best Laparoscopic Surgeon in Delhi, we ensure precision, safety, and unparalleled expertise to provide the best outcomes for our patients.</p>
+            
+                       <img src="{{asset('assets/images/facility/facility6.jpg')}}"
+                         alt="Obstetrics and Gynecology - Medical Care"
+                         class="content-image">
                     <ul>
                         <li><b>Experienced Surgeons:</b> Dr. Nikita Trehan and our team of specialists are among the best laparoscopic surgeons in Delhi, known for their expertise in complex surgeries.</li>
                         <li><b>Minimally Invasive Procedures: </b> We focus on providing minimally invasive surgeries that reduce pain, recovery time, and the risk of complications.</li>

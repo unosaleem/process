@@ -58,8 +58,11 @@
                     <p>One of our key focus areas is preconception care, where we guide and support women planning to conceive. Recognizing the importance of preparing both body and mind for pregnancy, our experts collaborate with patients to optimize their health and improve their chances of a successful pregnancy. The best gynecologist in Delhi offers personalized counseling, addresses individual concerns, and provides advice on nutrition, lifestyle changes, and prenatal vitamins.</p>
 
                     <p>For women facing high-risk pregnancies, Sunrise Hospital provides advanced facilities and expertise to monitor and manage unique needs. Our gynecologists, recognized as the best gynecologists in South Delhi, prioritize the safety of both mother and baby. With a proactive approach, we take every measure to minimize complications, ensuring the best outcomes for our patients.</p>
-
+                       
                     <h2>Comprehensive Gynecological Services</h2>
+                        <img src="{{asset('assets/images/facility/facility6.jpg')}}"
+                         alt="Obstetrics and Gynecology - Medical Care"
+                         class="content-image">
                     <p>In addition to preconception care and high-risk pregnancies, we provide general gynecology services. From routine check-ups to diagnosing and treating gynecological conditions, our experts address a variety of health issues. The best gynecologist in Delhi ensures personalized care for each patient’s unique needs.</p>
 
                     <p>Sunrise Hospital also specializes in infertility treatments, working closely with fertility specialists to identify the root causes and develop personalized treatment plans. Offering options like in vitro fertilization (IVF), our team, including the best gynecologist in Delhi NCR, ensures every couple receives expert guidance and support throughout their journey.</p>

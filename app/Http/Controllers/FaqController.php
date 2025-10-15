@@ -18,7 +18,7 @@ class FaqController extends Controller
     public function show($id)
     {
         $faq = Faq::findOrFail($id);
-        return view('admin.pages.faqs.show', compact('faqs'));
+        return view('admin.pages.faqs.show', compact('faq'));
     }
 
     // Show create form

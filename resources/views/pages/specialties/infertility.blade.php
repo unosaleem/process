@@ -30,7 +30,8 @@
                 <!-- Left Column - Content -->
                 <div class="col-lg-8">
                     <!-- Main Image -->
-                    <img src="{{asset('assets/images/specialty/infertility.jpg')}}"
+                    
+                        <img src="{{asset('assets/images/facility/facility6.jpg')}}"
                          alt="Obstetrics and Gynecology - Medical Care"
                          class="content-image">
 
@@ -51,6 +52,10 @@
                     <p>At <a href="/">Sunrise Hospital</a>, we provide personalized Infertility Treatment in Delhi, offering specialized care to address male infertility and improve the chances of conception.</p>
 
                     <p>Infertility in women can be caused by a variety of factors, including:</p>
+                    
+                        <img src="{{asset('assets/images/facility/facility6.jpg')}}"
+                         alt="Obstetrics and Gynecology - Medical Care"
+                         class="content-image">
                     <ul>
                         <li><b>Blocked Fallopian tubes </b> due to conditions like pelvic inflammatory disease, endometriosis, or previous ectopic pregnancy surgeries.</li>
                         <li><b>Uterine issues</b> such as fibroids, polyps, or adenomyosis.</li>

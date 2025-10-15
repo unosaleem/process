@@ -50,7 +50,9 @@
                     </ul>
 
                     <p>At Sunrise Hospital, we provide personalized care through our best gynecologist in South Delhi. Led by experts like Dr. Hafeez Rahman and Dr. Nikita Trehan, our team ensures pain-free and effective procedures for all patients.</p>
-
+                        <img src="{{asset('assets/images/facility/facility6.jpg')}}"
+                         alt="Obstetrics and Gynecology - Medical Care"
+                         class="content-image">
                     <p>Our hospital specializes in a wide range of gynecological procedures, including:</p>
 
                     <p>We offer competitive costs for all procedures, including:</p>

@@ -30,7 +30,8 @@
                 <!-- Left Column - Content -->
                 <div class="col-lg-8">
                     <!-- Main Image -->
-                    <img src="{{asset('assets/images/specialty/uro.jpg')}}"
+                  
+                    <img src="{{asset('assets/images/facility/facility6.jpg')}}"
                          alt="Obstetrics and Gynecology - Medical Care"
                          class="content-image">
 
@@ -75,6 +76,11 @@
 
                     <!-- <h3 class="content-heading">Comprehensive Preconception Care</h3> -->
                     <p>At Sunrise Hospital, we have some of the best surgeons specializing in Reconstructive URO surgery. Our team is dedicated to providing exceptional care, utilizing advanced techniques to ensure the best outcomes for our patients. We prioritize patient comfort, safety, and well-being throughout the treatment process.</p>
+                    
+                        <img src="{{asset('assets/images/facility/facility6.jpg')}}"
+                         alt="Obstetrics and Gynecology - Medical Care"
+                         class="content-image">
+                    
                     <ul>
                         <li><b>Experienced Surgeons:</b>Our expert surgeons have years of experience in reconstructive urology.</li>
                         <li><b>Comprehensive Care:</b> We offer personalized treatment plans for each patient, ensuring optimal results.</li>

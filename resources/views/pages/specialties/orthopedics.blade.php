@@ -30,7 +30,7 @@
                 <!-- Left Column - Content -->
                 <div class="col-lg-8">
                     <!-- Main Image -->
-                    <img src="{{asset('assets/images/specialty/orthopedics.jpg')}}"
+                        <img src="{{asset('assets/images/facility/facility6.jpg')}}"
                          alt="Obstetrics and Gynecology - Medical Care"
                          class="content-image">
 
@@ -72,6 +72,10 @@
                     <!-- <h3 class="content-heading">Advanced Surgical Excellence</h3> -->
                     <p>Our orthopedic surgeons, known as the best orthopedic surgeons in Delhi, perform these procedures with precision and care to ensure a quick recovery.</p>
 
+                     <img src="{{asset('assets/images/facility/facility6.jpg')}}"
+                         alt="Obstetrics and Gynecology - Medical Care"
+                         class="content-image">
+                         
                     <!-- <h3 class="content-heading">Personalized Treatment Approach</h3> -->
                     <p>Rehabilitation plays a vital role in orthopedic care. Our doctors prescribe personalized physical therapy plans to help patients regain strength and mobility after surgery. Preventive measures, such as proper posture and exercises, are recommended to reduce the risk of future injuries.</p>
 

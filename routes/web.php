@@ -12,6 +12,16 @@ use App\Http\Controllers\CommunityEventGalleryController;
 use App\Http\Controllers\PatientTestimonialController;
 use App\Http\Controllers\VideoTestimonialController;
 use App\Http\Controllers\FaqController;
+use App\Http\Controllers\AboutController;
+use App\Http\Controllers\VisionMissionController;
+use App\Http\Controllers\MilestonesController;
+use App\Http\Controllers\FacilityController;
+use App\Http\Controllers\PackageController;
+use App\Http\Controllers\CountryController;
+use App\Http\Controllers\StateController;
+use App\Http\Controllers\CityController;
+use App\Http\Controllers\TimeSlotController;
+use App\Http\Controllers\AppointmentController;
 
 
 Route::get('/index', function () {
@@ -47,7 +57,9 @@ Route::view('critical-cases-icu','pages.specialties.cardiac_science');
 Route::view('bariatric-surgery','pages.specialties.bariatric_surgery');
 Route::view('internal-medicine','pages.specialties.internal_medicine');
 Route::view('patient_education','pages.patient_education');
-
+Route::view('video-testimonial','pages.video-testimonial');
+Route::view('patient-testimonial','pages.patient-testimonial');
+Route::view('faq','pages.faq');
 
 
 // admin Route
@@ -57,22 +69,12 @@ Route::post('admin/logout', [AuthController::class, 'logout'])->name('admin.logo
 
 // Dashboard (protected)
 Route::middleware('auth')->group(function () {
-    // Route::get('admin/dashboard', function () {
-    //     return view('admin.pages.dashboard'); 
-    // })->name('admin.dashboard');
-});
-Route::get('admin/dashboard', function () {
-       return view('admin.pages.dashboard'); 
+    Route::get('admin/dashboard', function () {
+        return view('admin.pages.dashboard'); 
     })->name('admin.dashboard');
 
-//     Route::prefix('admin')->name('doctors.')->group(function () {
-//     Route::resource('doctors', DoctorController::class);
-// });/
-// our specialities
 
-// Route::resource('specialties', SpecialityController::class);
-// Specialties Management Routes
-Route::prefix('/specialties')->group(function () {
+    Route::prefix('/specialties')->group(function () {
     Route::get('/', [SpecialityController::class, 'index'])->name('specialties.index');        
     Route::get('/create', [SpecialityController::class, 'create'])->name('specialties.create'); 
     Route::post('/store', [SpecialityController::class, 'store'])->name('specialties.store'); 
@@ -144,6 +146,7 @@ Route::prefix('/patient-testimonials')->group(function () {
     Route::delete('/{id}/delete', [PatientTestimonialController::class, 'destroy'])->name('patient_testimonials.destroy');
 });
 
+// Video Testimonial Page Routes
 Route::prefix('/video-testimonials')->group(function () {
     Route::get('/', [VideoTestimonialController::class, 'index'])->name('video_testimonials.index');
     Route::get('/create', [VideoTestimonialController::class, 'create'])->name('video_testimonials.create');
@@ -154,6 +157,7 @@ Route::prefix('/video-testimonials')->group(function () {
     Route::delete('/{id}/delete', [VideoTestimonialController::class, 'destroy'])->name('video_testimonials.destroy');
 });
 
+// FAQ Page Routes
 Route::prefix('/faqs')->group(function () {
     Route::get('/', [FaqController::class, 'index'])->name('faqs.index');
     Route::get('/create', [FaqController::class, 'create'])->name('faqs.create');
@@ -162,4 +166,97 @@ Route::prefix('/faqs')->group(function () {
     Route::get('/{id}/edit', [FaqController::class, 'edit'])->name('faqs.edit');
     Route::put('/{id}/update', [FaqController::class, 'update'])->name('faqs.update');
     Route::delete('/{id}/delete', [FaqController::class, 'destroy'])->name('faqs.destroy');
+});
+
+// About Page Routes
+Route::prefix('admin')->name('admin.')->group(function () {
+    Route::get('/about', [AboutController::class, 'index'])->name('about.index');
+    Route::get('/about/create', [AboutController::class, 'create'])->name('about.create');
+    Route::post('/about/store', [AboutController::class, 'store'])->name('about.store');
+    Route::get('/about/{id}', [AboutController::class, 'show'])->name('about.show');
+    Route::get('/about/{id}/edit', [AboutController::class, 'edit'])->name('about.edit');
+    Route::put('/about/{id}', [AboutController::class, 'update'])->name('about.update');
+    Route::delete('/about/{id}', [AboutController::class, 'destroy'])->name('about.destroy');
+
+    // Vision Mission Page Routes
+
+    Route::get('/vision-mission', [VisionMissionController::class, 'index'])->name('vision-mission.index');
+    Route::get('/vision-mission/create', [VisionMissionController::class, 'create'])->name('vision-mission.create');
+    Route::post('/vision-mission/store', [VisionMissionController::class, 'store'])->name('vision-mission.store');
+    Route::get('/vision-mission/{id}', [VisionMissionController::class, 'show'])->name('vision-mission.show');
+    Route::get('/vision-mission/{id}/edit', [VisionMissionController::class, 'edit'])->name('vision-mission.edit');
+    Route::put('/vision-mission/{id}', [VisionMissionController::class, 'update'])->name('vision-mission.update');
+    Route::delete('/vision-mission/{id}', [VisionMissionController::class, 'destroy'])->name('vision-mission.destroy');
+
+    //Milestones
+    Route::get('/milestones', [MilestonesController::class, 'index'])->name('milestones.index');
+    Route::get('/milestones/create', [MilestonesController::class, 'create'])->name('milestones.create');
+    Route::post('/milestones/store', [MilestonesController::class, 'store'])->name('milestones.store');
+    Route::get('/milestones/{id}', [MilestonesController::class, 'show'])->name('milestones.show');
+    Route::get('/milestones/{id}/edit', [MilestonesController::class, 'edit'])->name('milestones.edit');
+    Route::put('/milestones/{id}', [MilestonesController::class, 'update'])->name('milestones.update');
+    Route::delete('/milestones/{id}', [MilestonesController::class, 'destroy'])->name('milestones.destroy');
+
+    // Hospital Facility Routes
+    Route::get('/facility', [FacilityController::class, 'index'])->name('facility.index');
+    Route::get('/facility/create', [FacilityController::class, 'create'])->name('facility.create');
+    Route::post('/facility/store', [FacilityController::class, 'store'])->name('facility.store');
+    Route::get('/facility/{id}', [FacilityController::class, 'show'])->name('facility.show');
+    Route::get('/facility/{id}/edit', [FacilityController::class, 'edit'])->name('facility.edit');
+    Route::put('/facility/{id}', [FacilityController::class, 'update'])->name('facility.update');
+    Route::delete('/facility/{id}', [FacilityController::class, 'destroy'])->name('facility.destroy');
+
+    //Health Packages Routes
+    Route::get('/package', [PackageController::class, 'index'])->name('package.index');
+    Route::get('/package/create', [PackageController::class, 'create'])->name('package.create');
+    Route::post('/package/store', [PackageController::class, 'store'])->name('package.store');
+    Route::get('/package/{id}', [PackageController::class, 'show'])->name('package.show');
+    Route::get('/package/{id}/edit', [PackageController::class, 'edit'])->name('package.edit');
+    Route::put('/package/{id}', [PackageController::class, 'update'])->name('package.update');
+    Route::delete('/package/{id}', [PackageController::class, 'destroy'])->name('package.destroy');
+
+    // --- Country Routes ---
+    Route::get('/countries', [CountryController::class, 'index'])->name('countries.index');
+    Route::get('/countries/create', [CountryController::class, 'create'])->name('countries.create');
+    Route::post('/countries/store', [CountryController::class, 'store'])->name('countries.store');
+    Route::get('/countries/{id}/edit', [CountryController::class, 'edit'])->name('countries.edit');
+    Route::put('/countries/{id}', [CountryController::class, 'update'])->name('countries.update');
+    Route::delete('/countries/{id}', [CountryController::class, 'destroy'])->name('countries.destroy');
+
+    // --- State Routes ---
+    Route::get('/states', [StateController::class, 'index'])->name('states.index');
+    Route::get('/states/create', [StateController::class, 'create'])->name('states.create');
+    Route::post('/states/store', [StateController::class, 'store'])->name('states.store');
+    Route::get('/states/{id}/edit', [StateController::class, 'edit'])->name('states.edit');
+    Route::put('/states/{id}', [StateController::class, 'update'])->name('states.update');
+    Route::delete('/states/{id}', [StateController::class, 'destroy'])->name('states.destroy');
+
+    // --- City Routes ---
+    Route::get('/cities', [CityController::class, 'index'])->name('cities.index');
+    Route::get('/cities/create', [CityController::class, 'create'])->name('cities.create');
+    Route::post('/cities/store', [CityController::class, 'store'])->name('cities.store');
+    Route::get('/cities/{id}/edit', [CityController::class, 'edit'])->name('cities.edit');
+    Route::put('/cities/{id}', [CityController::class, 'update'])->name('cities.update');
+    Route::delete('/cities/{id}', [CityController::class, 'destroy'])->name('cities.destroy');
+
+    // --- TimeSlot Routes ---
+    Route::get('/time-slots', [TimeSlotController::class, 'index'])->name('time-slots.index');
+    Route::get('/time-slots/create', [TimeSlotController::class, 'create'])->name('time-slots.create');
+    Route::post('/time-slots/store', [TimeSlotController::class, 'store'])->name('time-slots.store');
+    Route::get('/time-slots/{id}/edit', [TimeSlotController::class, 'edit'])->name('time-slots.edit');
+    Route::put('/time-slots/{id}', [TimeSlotController::class, 'update'])->name('time-slots.update');
+    Route::delete('/time-slots/{id}', [TimeSlotController::class, 'destroy'])->name('time-slots.destroy');
+
+    // --- Appointment Routes ---
+    Route::get('/appointments', [AppointmentController::class, 'index'])->name('appointments.index');
+    Route::get('/appointments/create', [AppointmentController::class, 'create'])->name('appointments.create');
+    Route::post('/appointments/store', [AppointmentController::class, 'store'])->name('appointments.store');
+    Route::get('/appointments/{id}/edit', [AppointmentController::class, 'edit'])->name('appointments.edit');
+    Route::put('/appointments/{id}', [AppointmentController::class, 'update'])->name('appointments.update');
+    Route::delete('/appointments/{id}', [AppointmentController::class, 'destroy'])->name('appointments.destroy');
+
+});
+
+
+
 });

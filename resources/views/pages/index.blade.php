@@ -1041,6 +1041,9 @@
                 <div class="swiper-button-next"></div>
                 <div class="swiper-button-prev"></div>
             </div>
+            <div class="text-center mt-4">
+                <a href="{{ url('patient-testimonial') }}" class="btn btn-primary btn-sm btn-link-view">View All</a>
+            </div>
         </div>
     </section>
 
@@ -1657,6 +1660,9 @@
                 <div class="swiper-button-next"></div>
                 <div class="swiper-button-prev"></div>
             </div>
+             <div class="text-center mt-4">
+                <a href="{{ url('video-testimonial') }}" class="btn btn-primary btn-sm btn-link-view">View All</a>
+            </div>
         </div>
     </section>
 
@@ -1752,6 +1758,9 @@
                         </div>
                     </div>
                 </div>
+            </div>
+            <div class="text-center mt-4">
+                <a href="{{ url('faq') }}" class="btn btn-primary btn-sm btn-link-view">View All</a>
             </div>
         </div>
     </section>
