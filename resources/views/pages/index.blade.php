@@ -1832,9 +1832,6 @@
     </div>
 </section>
 
-
-
-
     {{-- <section class="appointment-section">--}}
         {{-- <div class="container">--}}
             {{-- <div class="row align-items-center">--}}
@@ -1922,6 +1919,7 @@
                 {{-- </div>--}}
             {{-- </div>--}}
         {{-- </section>--}}
+
 @endsection
 @section('script')
     <script>
