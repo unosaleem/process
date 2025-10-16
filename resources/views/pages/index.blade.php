@@ -1755,7 +1755,7 @@
                             <iframe src="https://www.youtube.com/embed/0qmyp8DQiAM?si=61Rvh1M0G5DvuIGN"
                                 title="YouTube video" allowfullscreen></iframe>
                         </div>
-                    </div>
+                    </div>.
 
                     <!-- Slide 4 -->
                     <div class="swiper-slide">
